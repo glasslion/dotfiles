@@ -50,7 +50,7 @@ source $ZSH/oh-my-zsh.sh
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-[[ -s /home/ljzhou/.autojump/etc/profile.d/autojump.sh ]] && source /home/ljzhou/.autojump/etc/profile.d/autojump.sh
+[[ -s /home/vagrant/.autojump/etc/profile.d/autojump.sh ]] && source /home/vagrant/.autojump/etc/profile.d/autojump.sh
 
 
 # Show open ports
