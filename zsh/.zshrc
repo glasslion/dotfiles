@@ -1,3 +1,6 @@
+# ZSH Configs
+###################################################################################
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -40,18 +43,22 @@ ZSH_THEME="gentoo"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip python)
 
+plugins=(git pip python)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+###################################################################################
+
+export EDITOR='subl -n -w'
 
 # virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-[[ -s /home/vagrant/.autojump/etc/profile.d/autojump.sh ]] && source /home/vagrant/.autojump/etc/profile.d/autojump.sh
 
+# Alias
+###################################################################################
 
 # Show open ports
 alias ports='netstat -tulanp'
@@ -62,4 +69,16 @@ alias update='sudo apt-get update && sudo apt-get upgrade'
 # become root #
 alias su='sudo -i'
 
+# safe delete
 alias del='rm -I –preserve_root'
+
+# cd into the current directory, useful under mounted locatons
+alias cpd='cd ${PWD##*/}'
+
+
+
+# [[ -s /home/vagrant/.autojump/etc/profile.d/autojump.sh ]] && source /home/vagrant/.autojump/etc/profile.d/autojump.sh
+
+# Secrets
+################################################################################
+source ./.zshrc.secret
