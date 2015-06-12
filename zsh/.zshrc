@@ -81,4 +81,4 @@ alias cpd='cd ${PWD##*/}'
 
 # Secrets
 ################################################################################
-source ./.zshrc.secret
+source ~/.zshrc.secret
