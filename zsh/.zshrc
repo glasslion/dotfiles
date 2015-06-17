@@ -79,6 +79,12 @@ alias cpd='cd ${PWD##*/}'
 
 # [[ -s /home/vagrant/.autojump/etc/profile.d/autojump.sh ]] && source /home/vagrant/.autojump/etc/profile.d/autojump.sh
 
+# the fuck: https://github.com/nvbn/thefuck
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+
+# added by travis gem
+[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+
 # Secrets
 ################################################################################
 source ~/.zshrc.secret
