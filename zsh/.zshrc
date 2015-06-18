@@ -44,7 +44,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git pip python)
+plugins=(git pip python z)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -87,4 +87,4 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 # Secrets
 ################################################################################
-source ~/.zshrc.secret
+[ -f /home/leo/.zshrc.secret ] && source ~/.zshrc.secret
