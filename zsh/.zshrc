@@ -44,7 +44,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git pip python z)
+plugins=(git pip python colored-man autojump)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
