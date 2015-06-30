@@ -44,7 +44,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git pip python colored-man autojump)
+plugins=(git pip python colored-man autojump tmuxinator)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -80,7 +80,6 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
 
 # Secrets
 ################################################################################
