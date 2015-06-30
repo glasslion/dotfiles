@@ -75,16 +75,13 @@ alias del='rm -I –preserve_root'
 # cd into the current directory, useful under mounted locatons
 alias cpd='cd ${PWD##*/}'
 
-
-
-# [[ -s /home/vagrant/.autojump/etc/profile.d/autojump.sh ]] && source /home/vagrant/.autojump/etc/profile.d/autojump.sh
-
 # the fuck: https://github.com/nvbn/thefuck
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 # added by travis gem
-[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
 
 # Secrets
 ################################################################################
-[ -f /home/leo/.zshrc.secret ] && source ~/.zshrc.secret
+[ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
