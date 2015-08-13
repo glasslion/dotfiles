@@ -1,0 +1,5 @@
+default_context:
+    full_name: "Leo Zhou"
+    email: "glasslion@gmail.com"
+    github_username: "glasslion"
+cookiecutters_dir: "~/.cookiecutters/"

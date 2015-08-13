@@ -33,3 +33,4 @@ windows:
   - approot: cd /mnt/cmdb/src/oneops/oneops_web/oneops_web/
   - templates: cd /mnt/cmdb/src/oneops/oneops_web/templates/
   - xadmin: cd /mnt/cmdb/src/django-xadmin/xadmin/
+  - salt_modules: cd /mnt/cmdb/src/salt_modules/
