@@ -15,4 +15,7 @@ sudo apt-get install stow
 stow zsh
 stow python
 stow others
+
+# Decrypt secrets
+gpg *.asc
 ```
