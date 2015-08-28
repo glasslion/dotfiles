@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gentoo"
+ZSH_THEME="clean"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -59,6 +59,12 @@ export LC_ALL=en_US.UTF-8
 
 
 export EDITOR='subl -n -w'
+
+
+
+# Python
+###################################################################################
+ZSH_PIP_INDEXES=(https://pypi.mirrors.ustc.edu.cn/simple/)
 
 # virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
