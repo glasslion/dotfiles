@@ -1,0 +1,16 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Djaneiro",
+		"Jedi - Python autocompletion",
+		"Package Control",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pylint",
+		"SublimeREPL"
+	]
+}
