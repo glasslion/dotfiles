@@ -74,6 +74,8 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 # Alias
 ###################################################################################
 
+alias ack='ack-grep'
+
 # Show open ports
 alias ports='netstat -tulanp'
 
