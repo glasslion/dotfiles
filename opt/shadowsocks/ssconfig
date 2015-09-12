@@ -16,6 +16,8 @@ def main():
     with open(config_fil_path) as config_fil:
         configs = json.loads(config_fil.read())
 
+    print "Using {} now.".format(configs['server'])
+
     server_infos = configs['server_password']
     keyword = raw_input("Please type the filter keyword:")
 
