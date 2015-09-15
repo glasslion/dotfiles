@@ -97,6 +97,10 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
+# clipboard
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # Secrets
 ################################################################################
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
