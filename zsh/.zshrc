@@ -101,6 +101,14 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+# docker
+alias docker='sudo docker'
+alias dockerrunonce='sudo dockerrun --rm'
+alias dockerkillall='docker kill $(docker ps -q)'
+alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
+alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+
+
 # Secrets
 ################################################################################
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
