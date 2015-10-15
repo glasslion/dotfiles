@@ -44,6 +44,9 @@ ZSH_THEME="clean"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
+
+ZSH_CUSTOM="~/.zsh_custom"
+
 plugins=(git pip python colored-man autojump tmuxinator)
 source $ZSH/oh-my-zsh.sh
 
