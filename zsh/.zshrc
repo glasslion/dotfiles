@@ -112,6 +112,8 @@ alias dc-cleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(d
 alias dc-cleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
 [ -f ~/.zsh_docker ] && . ~/.zsh_docker
 
+# added by Anaconda2 2.4.0 installer
+[ -d $HOME/anaconda2 ] && export PATH="$HOME/anaconda2/bin:$PATH"
 
 # Secrets
 ################################################################################
