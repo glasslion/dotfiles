@@ -442,6 +442,4 @@ case "$words[1]" in
         __wait ;;
     exec)
         __exec ;;
-    runonce)
-        __runonce ;;
 esac

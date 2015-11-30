@@ -47,7 +47,7 @@ ZSH_THEME="clean"
 
 ZSH_CUSTOM="~/.zsh_custom"
 
-plugins=(git pip python colored-man autojump tmuxinator)
+plugins=(git pip python colored-man autojump tmuxinator docker fabric)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -61,7 +61,7 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 
-export EDITOR='vim'
+export EDITOR='subl -n -w'
 
 
 
@@ -105,11 +105,12 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 # docker
-alias docker='sudo docker'
-alias dockerrunonce='sudo dockerrun --rm'
-alias dockerkillall='docker kill $(docker ps -q)'
-alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
-alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+alias dc='sudo docker'
+alias dc-shell='sudo docker run --rm -i -t'
+alias dc-killall='docker kill $(docker ps -q)'
+alias dc-cleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
+alias dc-cleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+[ -f ~/.zsh_docker ] && . ~/.zsh_docker
 
 
 # Secrets
