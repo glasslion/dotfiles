@@ -28,9 +28,9 @@ root: /mnt/cmdb/src/oneops/oneops_web/
 # post: tmux -CC attach -t oneops
 
 windows:
-  - cmdb: cd /mnt/cmdb/src/oneops/oneops_web/cmdb
-  - deploy: cd /mnt/cmdb/src/oneops/oneops_web/deployment/
-  - approot: cd /mnt/cmdb/src/oneops/oneops_web/oneops_web/
+  - proj: cd /mnt/cmdb/src/oneops/
+  - django: cd /mnt/cmdb/src/oneops/oneops_web/
   - templates: cd /mnt/cmdb/src/oneops/oneops_web/templates/
-  - xadmin: cd /mnt/cmdb/src/django-xadmin/xadmin/
   - salt_modules: cd /mnt/cmdb/src/salt_modules/
+  - fab: cd /mnt/cmdb/src/oneops/; workon oneops;
+  - berth: cd /home/leo/docker/compose-salt-cluster/; workon oneops;
