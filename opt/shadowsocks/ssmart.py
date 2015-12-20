@@ -29,7 +29,7 @@ def check_connection():
         c.setopt(pycurl.PROXYPORT, 1080)
         c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
         c.setopt(c.WRITEDATA, buffer)
-        c.setopt(pycurl.TIMEOUT_MS, 10000)
+        c.setopt(pycurl.TIMEOUT_MS, 3000)
         c.perform()
         c.close()
     except pycurl.error as e:
