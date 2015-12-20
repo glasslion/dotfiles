@@ -113,7 +113,7 @@ alias dc-cleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(doc
 [ -f ~/.zsh_docker ] && . ~/.zsh_docker
 
 # added by Anaconda2 2.4.0 installer
-[ -d $HOME/anaconda2 ] && export PATH="$HOME/anaconda2/bin:$PATH"
+[ -d $HOME/anaconda2 ] && export PATH="$PATH:$HOME/anaconda2/bin"
 
 # Secrets
 ################################################################################
