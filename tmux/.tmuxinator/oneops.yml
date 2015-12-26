@@ -32,5 +32,5 @@ windows:
   - django: cd /mnt/cmdb/src/oneops/oneops_web/
   - templates: cd /mnt/cmdb/src/oneops/oneops_web/templates/
   - salt_modules: cd /mnt/cmdb/src/salt_modules/
-  - fab: cd /mnt/cmdb/src/oneops/; workon oneops;
-  - berth: cd /home/leo/docker/compose-salt-cluster/; workon oneops;
+  - fab:  workon oneops && cd /mnt/cmdb/src/oneops/
+  - berth: workon oneops && cd /home/leo/docker/compose-salt-cluster/
