@@ -16,6 +16,9 @@ stow zsh
 stow python
 stow others
 
+# Encrypt secrets
+gpg --recipient <keyname> --output <secret>.asc --encrypt <secret> 
+
 # Decrypt secrets
-gpg *.asc
+gpg <secret>.asc
 ```
