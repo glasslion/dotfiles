@@ -20,11 +20,11 @@ logger.setLevel(logging.INFO)
 
 #   # Send the signal to all the process groups
 def check_connection():
-    logger.info("Start requesting http://www.google.com.")
+    logger.info("Start requesting https://www.baidu.com.")
     try:
         buffer = BytesIO()
         c = pycurl.Curl()
-        c.setopt(pycurl.URL, 'http://www.google.com')
+        c.setopt(pycurl.URL, 'https://www.baidu.com')
         c.setopt(pycurl.PROXY, 'localhost')
         c.setopt(pycurl.PROXYPORT, 1080)
         c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
@@ -66,14 +66,14 @@ def main():
     try:
         while True:
             if check_connection():
-                time.sleep(60)
+                time.sleep(60*5)
             else:
                 if ss_process:
                     os.killpg(ss_process.pid, signal.SIGTERM)
                 switch_server()
                 ss_process = subprocess.Popen("sslocal", stdout=subprocess.PIPE,
                                 shell=True, preexec_fn=os.setsid)
-                time.sleep(10)
+                time.sleep(60)
     except KeyboardInterrupt:
         if ss_process:
             os.killpg(ss_process.pid, signal.SIGTERM)
