@@ -124,6 +124,9 @@ alias dc-cleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(doc
 alias pwget='proxychains wget'
 alias paria2c='proxychains aria2c'
 
+alias rerun='python ~/src/brainhole/rerun.py'
+alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
+
 # added by Anaconda2 2.4.0 installer
 ###################################################################################
 [ -d $HOME/anaconda2 ] && export PATH="$PATH:$HOME/anaconda2/bin"
