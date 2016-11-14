@@ -1,0 +1,7 @@
+--ignore-dir=.env/
+--ignore-dir=.idea/
+--ignore-dir=venv/
+--ignore-dir=node_modules/
+
+#make sure ack knows how to search common filetypes
+--type-set=json=.json
