@@ -69,10 +69,18 @@ export EDITOR='subl -n -w'
 ###################################################################################
 ZSH_PIP_INDEXES=(https://pypi.mirrors.ustc.edu.cn/simple/)
 
+# pip install --user
+export PATH="$PATH:$HOME/.local/bin"
+
 # virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
+
+# NodeJS
+###################################################################################
+export NVM_DIR="/home/leo/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Alias
 ###################################################################################
