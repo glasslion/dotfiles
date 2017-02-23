@@ -82,6 +82,11 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 export NVM_DIR="/home/leo/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Golang
+###################################################################################
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # Alias
 ###################################################################################
 
@@ -134,3 +139,6 @@ alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
 # Secrets
 ################################################################################
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
+
+# added by travis gem
+[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
