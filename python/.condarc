@@ -3,3 +3,4 @@ channels:
   - defaults
 
 show_channel_urls: yes
+ssl_verify: False
