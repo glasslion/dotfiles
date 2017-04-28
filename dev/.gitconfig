@@ -20,3 +20,11 @@
 [http "https://go.googlesource.com/"]
   sslVerify = false
   proxy = http://127.0.0.1:8087
+
+[http "golang.org"]
+  sslVerify = false
+  proxy = http://127.0.0.1:8087
+
+[git "golang.org"]
+  sslVerify = false
+  proxy = http://127.0.0.1:8087
