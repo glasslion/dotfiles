@@ -64,6 +64,9 @@ export LC_ALL=en_US.UTF-8
 export EDITOR='vim'
 
 
+# Solarized Color Theme for GNU ls 
+###################################################################################
+eval `dircolors ~/.dircolors.ansi-dark`
 
 # Python
 ###################################################################################
