@@ -5,6 +5,9 @@ My configrations for common tools, like vim, zsh ,tmux ...
 
 Files are linked to the home directory by GNU Stow.
 
+## Branching
+Eash git branch represent a working environment. Because I have multiple working environments, I adapt some kind of *parallel branche* strategy in this repo. Unique changes for a sepcificated environment are committed to that branch directly. Changes shared by all environments are committed to the *common* branch, then merged to other branches.
+
 ## Bootstrap
 
 ```bash
