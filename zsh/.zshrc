@@ -61,9 +61,13 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 
-export EDITOR='code --wait'
+
+export EDITOR='vim'
 
 
+# Solarized Color Theme for GNU ls 
+###################################################################################
+eval `dircolors ~/.dircolors.ansi-dark`
 
 # Python
 ###################################################################################
@@ -71,10 +75,6 @@ ZSH_PIP_INDEXES=(https://pypi.mirrors.ustc.edu.cn/simple/)
 
 # pip install --user
 export PATH="$PATH:$HOME/.local/bin"
-
-# virtualenv wrapper
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 
 # NodeJS
