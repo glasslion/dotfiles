@@ -1,0 +1,24 @@
+#!/usr/bin/expect
+set force_conservative 0  ;
+if {$force_conservative} {
+    set send_slow {1 .1}
+    proc send {ignore arg} {
+            sleep .1
+            exp_send -s -- $arg
+    }
+}
+
+# allow script to run forever
+set timeout -1
+
+# make buffer large
+match_max 100000
+
+spawn /opt/forticlient-sslvpn/64bit/forticlientsslvpn_cli --server $::env(FORTI_VPN_SERVER) --vpnuser $::env(FORTI_VPN_USER)
+
+expect "Password for VPN:"
+send -- $::env(FORTI_VPN_PASS)
+send -- "\r"
+expect "Would you like to connect to this server? (Y/N)"
+send -- "Y\r"
+expect eof
