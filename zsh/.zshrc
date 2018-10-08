@@ -84,8 +84,11 @@ export NVM_DIR="/home/leo/.nvm"
 
 # Golang
 ###################################################################################
+if [ -d "/usr/lib/go-1.9" ]; then
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/lib/go-1.9/bin:$GOPATH/bin
+fi
+
 
 # Alias
 ###################################################################################
@@ -142,3 +145,10 @@ alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
 
 # added by travis gem
 [ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+
+# cuda
+if [ -d "/usr/local/cuda-8.0" ]; then
+export CUDA_HOME=/usr/local/cuda-8.0
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
