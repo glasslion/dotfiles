@@ -8,12 +8,15 @@
 		"Babel",
 		"CJSX Syntax",
 		"Djaneiro",
+		"GoSublime",
 		"Jedi - Python autocompletion",
 		"Package Control",
+		"Sass",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-pep8",
 		"SublimeLinter-pylint",
-		"SublimeREPL"
+		"SublimeREPL",
+		"Vue Syntax Highlight"
 	]
 }
