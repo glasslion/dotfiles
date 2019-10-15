@@ -84,9 +84,9 @@ export NVM_DIR="/home/leo/.nvm"
 
 # Golang
 ###################################################################################
-if [ -d "/usr/lib/go-1.9" ]; then
+if [ -d "/usr/local/go" ]; then
 export GOPATH=$HOME/go
-export PATH=$PATH:/usr/lib/go-1.9/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
 
 
