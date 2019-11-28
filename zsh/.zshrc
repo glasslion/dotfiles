@@ -84,8 +84,11 @@ export NVM_DIR="/home/leo/.nvm"
 
 # Golang
 ###################################################################################
+if [ -d "/usr/local/go" ]; then
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+fi
+
 
 # Alias
 ###################################################################################
@@ -112,6 +115,8 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+alias restart-kde='kquitapp5 plasmashell || kstart plasmashell'
 
 # clipboard
 alias pbcopy='xclip -selection clipboard'
@@ -142,3 +147,10 @@ alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
 
 # added by travis gem
 [ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+
+# cuda
+if [ -d "/usr/local/cuda-8.0" ]; then
+export CUDA_HOME=/usr/local/cuda-8.0
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
