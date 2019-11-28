@@ -146,6 +146,12 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
 
+# meituan dianping use go 1.11
+if [ -d "/usr/local/opt/go@1.11" ]; then
+export GOPATH=$HOME/go
+export PATH="$PATH:/usr/local/opt/go@1.11/bin:$GOPATH/bin"
+fi
+
 
 # Alias
 ###################################################################################
