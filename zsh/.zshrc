@@ -136,7 +136,7 @@ alias sourcetree='open -a SourceTree'
 
 # NodeJS
 ###################################################################################
-export NVM_DIR="/home/leo/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Golang
@@ -215,7 +215,7 @@ alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
 
 # added by travis gem
-[ -f /home/leo/.travis/travis.sh ] && source /home/leo/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # cuda
 if [ -d "/usr/local/cuda-8.0" ]; then
