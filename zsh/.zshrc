@@ -159,6 +159,10 @@ if command -v ack-grep  1>/dev/null 2>&1; then
   alias ack='ack-grep'
 fi
 
+if [ -f ~/.agignore ]; then
+  alias ag='ag -p ~/.agignore --width 150'
+fi
+
 # Show open ports
 alias ports='netstat -tulanp'
 
