@@ -136,7 +136,7 @@ alias sourcetree='open -a SourceTree'
 
 # NodeJS
 ###################################################################################
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Golang
@@ -159,8 +159,8 @@ if command -v ack-grep  1>/dev/null 2>&1; then
   alias ack='ack-grep'
 fi
 
-if [ -f ~/.agignore ]; then
-  alias ag='ag -p ~/.agignore --width 150'
+if [ -f $HOME/.agignore ]; then
+  alias ag='ag -p $HOME/.agignore --width 150'
 fi
 
 # Show open ports
@@ -181,7 +181,7 @@ alias cpd='cd ${PWD##*/}'
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 # added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 alias restart-kde='kquitapp5 plasmashell || kstart plasmashell'
 
@@ -197,7 +197,7 @@ alias dc-shell='sudo docker run --rm -i -t'
 alias dc-killall='docker kill $(docker ps -q)'
 alias dc-cleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
 alias dc-cleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
-[ -f ~/.zsh_docker ] && . ~/.zsh_docker
+[ -f $HOME/.zsh_docker ] && . $HOME/.zsh_docker
 
 # proxy
 alias pwget='proxychains wget'
@@ -212,10 +212,10 @@ alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
 
 # Secrets
 ################################################################################
-[ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
+[ -f $HOME/.zshrc.secret ] && source $HOME/.zshrc.secret
 
 # added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # cuda
 if [ -d "/usr/local/cuda-8.0" ]; then
