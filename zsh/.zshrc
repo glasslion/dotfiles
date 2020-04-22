@@ -124,10 +124,6 @@ if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)";
 fi
 
-if command -v pyenv-sh-virtualenvwrapper 1>/dev/null 2>&1; then
-  pyenv virtualenvwrapper_lazy
-fi
-
 ZSH_PIP_INDEXES=(https://pypi.mirrors.ustc.edu.cn/simple/)
 
 # Dev tools
