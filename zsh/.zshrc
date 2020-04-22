@@ -182,7 +182,7 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias restart-kde='kquitapp5 plasmashell || kstart plasmashell'
 
 # clipboard
-if ! command -v ack-grep  1>/dev/null 2>&1; then
+if command -v xclip  1>/dev/null 2>&1; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
@@ -201,6 +201,10 @@ alias paria2c='proxychains aria2c'
 
 alias rerun='python ~/src/brainhole/rerun.py'
 alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
+
+# git
+alias git-clean-branches='git checkout master && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d && git remote prune origin'
+
 
 # added by Anaconda2 2.4.0 installer
 ###################################################################################
