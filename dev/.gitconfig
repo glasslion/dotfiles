@@ -3,10 +3,10 @@
 	default = simple
 
 [alias]
-  st = status
-  ci = commit --verbose
-  br = branch
-  co = checkout
+	st = status
+	ci = commit --verbose
+	br = branch
+	co = checkout
 [credential]
 
 	helper = cache --timeout=36000
@@ -15,5 +15,11 @@
 	autocrlf = input
 	editor = code --wait
 
-[include]
-  path = ~/.gitconfig_extra
+[includeIf "gitdir:~/code/"]
+	path = ~/.gitconfig-meituan
+
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig-meituan
+
+[includeIf "gitdir:~/play/"]
+	path = ~/.gitconfig-mine
