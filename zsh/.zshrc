@@ -204,6 +204,7 @@ alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
 
 # git
 alias git-clean-branches='git checkout master && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d && git remote prune origin'
+alias git-del-remote-branch='git push -d  origin $(git branch --show-current)'
 
 
 # added by Anaconda2 2.4.0 installer
