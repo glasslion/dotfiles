@@ -224,3 +224,6 @@ export CUDA_HOME=/usr/local/cuda-8.0
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
+
+# move the book_id argument to the end, so it's easier to edit it
+ geektime-download() {  geektime ebook "$1"  --comments-count 100 }
