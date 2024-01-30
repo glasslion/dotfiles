@@ -15,11 +15,20 @@
 	autocrlf = input
 	editor = code --wait
 
+[url "ssh://git@git.dianpingoa.com/"]
+	insteadOf = https://dianpingoa.com/
+
 [includeIf "gitdir:~/code/"]
 	path = ~/.gitconfig-meituan
 
 [includeIf "gitdir:~/work/"]
 	path = ~/.gitconfig-meituan
 
-[includeIf "gitdir:~/play/"]
+[includeIf "gitdir:~/go/"]
+	path = ~/.gitconfig-meituan
+
+[includeIf "gitdir:/opt/meituan"]
+	path = ~/.gitconfig-meituan
+
+[includeIf "gitdir:~/poney/"]
 	path = ~/.gitconfig-mine
