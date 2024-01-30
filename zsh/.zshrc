@@ -227,3 +227,7 @@ fi
 
 # move the book_id argument to the end, so it's easier to edit it
  geektime-download() {  geektime ebook "$1"  --comments-count 100 }
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
