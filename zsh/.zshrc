@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew pip autojump zsh-autosuggestions docker fabric)
+plugins=(git brew autojump zsh-autosuggestions docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,8 +132,7 @@ alias sourcetree='open -a SourceTree'
 
 # NodeJS
 ###################################################################################
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Golang
 ###################################################################################
@@ -148,6 +147,10 @@ export GOPATH=$HOME/go
 export PATH="$PATH:/usr/local/opt/go@1.12/bin:$GOPATH/bin"
 fi
 
+if [ -d "/usr/local/opt/go@1.12" ]; then
+export GOPATH=$HOME/go
+export GOPRIVATE=git.sankuai.com/*,dianpingoa.com/*
+fi
 
 # Alias
 ###################################################################################
@@ -226,8 +229,22 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 fi
 
 # move the book_id argument to the end, so it's easier to edit it
- geektime-download() {  geektime ebook "$1"  --comments-count 100 }
+geektime-download() {  geektime ebook "$1"  --comments-count 100 }
+
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 
-export PATH="$HOME/.poetry/bin:$PATH"
+
+# JDK
+if [ -d "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home" ]; then
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home"
+fi
+
+if [ -d "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home" ]; then
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home"
+fi
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+
+# '' '/##+sec$/d' /etc/hosts
+alias clean-hosts="sudo /usr/bin/sed -i '' '/##+sec$/d' /etc/hosts"
+

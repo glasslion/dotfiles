@@ -1,11 +1,9 @@
 [user]
-        name = 周力鉴
+        name = zhoulijian
         email = zhoulijian@meituan.com
 [core]
         excludesfile = /Users/mtdp/.gitignore_global
         pager = diff-so-fancy | less --tabs=4 -RFX
-[commit]
-        template = /Users/mtdp/.stCommitMsg
 [color]
         ui = true
 [color "diff-highlight"]

@@ -32,3 +32,8 @@
 
 [includeIf "gitdir:~/poney/"]
 	path = ~/.gitconfig-mine
+[http]
+	postBuffer = 524288000
+[user]
+	name = Leo
+	email = glasslion@gmail.com
