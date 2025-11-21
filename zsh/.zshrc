@@ -79,9 +79,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 # Locale
 ###################################################################################
 export LANG=en_US.UTF-8
@@ -89,11 +86,6 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 export EDITOR='vim'
 
 # Compilation flags
@@ -114,16 +106,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Python
 ###################################################################################
-export PATH="$PATH:$HOME/.local/bin"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-if which pyenv-virtualenv-init > /dev/null; then
-  eval "$(pyenv virtualenv-init -)";
-fi
-
 ZSH_PIP_INDEXES=(https://pypi.mirrors.ustc.edu.cn/simple/)
 
 # Dev tools
@@ -162,71 +144,19 @@ if [ -f $HOME/.agignore ]; then
   alias ag='ag -p $HOME/.agignore --width 150'
 fi
 
-# Show open ports
-alias ports='netstat -tulanp'
-
-alias apt-get="sudo apt-get"
-
-# become root #
-alias su='sudo -i'
-
-# safe delete
-alias del='rm -I –preserve_root'
-
-# cd into the current directory, useful under mounted locatons
-alias cpd='cd ${PWD##*/}'
-
-# the fuck: https://github.com/nvbn/thefuck
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-alias restart-kde='kquitapp5 plasmashell || kstart plasmashell'
-
 # clipboard
 if command -v xclip  1>/dev/null 2>&1; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
-# docker
-alias dc='sudo docker'
-alias dc-shell='sudo docker run --rm -i -t'
-alias dc-killall='docker kill $(docker ps -q)'
-alias dc-cleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
-alias dc-cleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
-[ -f $HOME/.zsh_docker ] && . $HOME/.zsh_docker
-
-# proxy
-alias pwget='proxychains wget'
-alias paria2c='proxychains aria2c'
-
-alias rerun='python ~/src/brainhole/rerun.py'
-alias rpyt='python ~/src/brainhole/rerun.py proxychains youtube-dl'
-
 # git
 alias git-clean-branches='git checkout master && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d && git remote prune origin'
 alias git-del-remote-branch='git push -d  origin $(git branch --show-current)'
 
-
-# added by Anaconda2 2.4.0 installer
-###################################################################################
-[ -d $HOME/anaconda2 ] && export PATH="$PATH:$HOME/anaconda2/bin"
-
 # Secrets
 ################################################################################
 [ -f $HOME/.zshrc.secret ] && source $HOME/.zshrc.secret
-
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-# cuda
-if [ -d "/usr/local/cuda-8.0" ]; then
-export CUDA_HOME=/usr/local/cuda-8.0
-export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi
 
 # move the book_id argument to the end, so it's easier to edit it
 geektime-download() {  geektime ebook "$1"  --comments-count 100 }
@@ -248,3 +178,14 @@ export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 # '' '/##+sec$/d' /etc/hosts
 alias clean-hosts="sudo /usr/bin/sed -i '' '/##+sec$/d' /etc/hosts"
 
+
+[ -d $HOME/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
+
+
+
+# Added by CatPaw
+export PATH="/Users/leo/.catpaw/bin:$PATH"
+
+source ~/.moaextrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
