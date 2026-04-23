@@ -5,8 +5,6 @@
 --ignore-dir=node_modules/
 --ignore-dir=vendor/
 --ignore-dir=dist/
---ignore-dir=rocket-host-instance-openapi/
---ignore-dir=notebooks/
 
 
 #make sure ack knows how to search common filetypes
